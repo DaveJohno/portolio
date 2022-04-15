@@ -1,0 +1,29 @@
+body > div.MuiModal-root.css-79ws1d-MuiModal-root > div.MuiBox-root.css-ulby4e {
+  padding: 10vh 1vw;
+  padding-bottom: 7vh;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  overflow: scroll;
+  padding: 2px;
+
+  p {
+    color: wheat;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  section {
+    width: 80%;
+    padding: 0px;
+    overflow: hidden;
+  }
+}
