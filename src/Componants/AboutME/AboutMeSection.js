@@ -21,7 +21,7 @@ export default function AboutMeSection() {
       </p>
       <p>
         My goal is to find a role where I can collaborate with others, grow my
-        skills, and contribute to highly functional and uniqued designed
+        skills, and contribute to highly functional and uniquely designed
         products.
       </p>
     </section>

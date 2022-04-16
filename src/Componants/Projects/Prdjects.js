@@ -7,6 +7,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import "../Home/Home.scss";
 import ModalBackBtn from "../ModalBackBtn";
+import "./Projects.scss";
 
 const style = {
   position: "absolute",
@@ -18,12 +19,82 @@ const style = {
   height: "80%",
   maxHeight: 1200,
   bgcolor: " rgba(255, 255, 255, .9)",
-  border: "5px solid rgba(225, 184, 127, 1)",
+  // border: "5px solid rgba(225, 184, 127, 1)",
   boxShadow: 24,
   p: 4,
 };
 
 export default function ProjectsModal() {
+  const projectsArr = [
+    {
+      title: "",
+      image: "",
+      description: "",
+      link: "",
+      date: "",
+    },
+
+    {
+      title: "Tic Tac Toe",
+      image: "",
+      description: "",
+      link: "",
+      date: "",
+    },
+    {
+      title: "Fast Feasts",
+      image: "./project_images/fast_feasts.png",
+      description:
+        "This project allows users to browse a menu, make an order, add extra patrons to the table and allow any meal to have cooking instructions attached to that meal",
+      link: "https://afternoon-crag-13970.herokuapp.com/",
+      date: "february 2022",
+    },
+
+    {
+      title: "",
+      image: "",
+      description: "",
+      link: "",
+      date: "",
+    },
+
+    {
+      title: "Asteroids",
+      image:
+        "https://github.com/DaveJohno/project-four-asteroids/raw/master/readme_images/Screenshot%202022-04-10%20at%209.47.59%20pm.png",
+      description:
+        "my interperation of the classic game ready to play on the browser just modern tech including HTML, CSS, JavaScript and React",
+      link: "https://davejohno-asteroids.herokuapp.com/",
+      date: "April 2022",
+    },
+    {
+      title: "Pet Regestation Form Prototype",
+      image: "./project_images/pet_rego.png",
+      description: "Prototype Web form, using javascript and bootstrap",
+      link: "https://codepen.io/davejohno/full/abLyBZL",
+      date: "December 2021",
+    },
+    {
+      title: "COG Prototype",
+      image: "./project_images/cog_website.png",
+      description: "prototype landing page for Geelong City Council",
+      link: "https://sad-aryabhata-17164e.netlify.app/",
+      date: "November 2021",
+    },
+    {
+      title: "wingz n thingz",
+      image: "./project_images/wingz.png",
+      description:
+        "Final project for General Assembly's Front-end web development caurse. take-a-way shop website",
+      link: "https://loving-mirzakhani-e20a3e.netlify.app/",
+      date: "October 2021",
+    },
+  ];
+
+  let projects = projectsArr;
+  console.log(projects);
+  console.log(projects[0]);
+
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -47,12 +118,29 @@ export default function ProjectsModal() {
       >
         <Fade in={open}>
           <Box sx={style}>
-            <Typography id="transition-modal-title" variant="h6" component="h2">
-              Text in a modal
-            </Typography>
-            <Typography id="transition-modal-description" sx={{ mt: 2 }}>
-              Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-            </Typography>
+            <div className="projects">
+              <ul className="project-list">
+                <img src="project_images/cog_website.png" alt="" />
+                {projects.map((project, i) => (
+                  <React.Fragment key={i}>
+                    {console.log(project)}
+                    <li className="project-card">
+                      <img
+                        className="project-image"
+                        src={project.image}
+                        alt=""
+                      />
+
+                      <div className="project-title">{project.title}</div>
+                      <div className="project-description">
+                        {project.description}
+                      </div>
+                      <div className="project-date">{project.date}</div>
+                    </li>
+                  </React.Fragment>
+                ))}
+              </ul>
+            </div>
             <ModalBackBtn handleClose={handleClose} />
           </Box>
         </Fade>

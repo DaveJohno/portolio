@@ -19,7 +19,7 @@ const style = {
   height: "80%",
   maxHeight: 1200,
   bgcolor: " rgba(255, 255, 255, .9)",
-  border: "5px solid rgba(225, 184, 127, 1)",
+  // border: "5px solid rgba(225, 184, 127, 1)",
   boxShadow: 24,
   p: 4,
 };

@@ -5,6 +5,7 @@
   }
 
   h2 {
+    margin-top: 30px;
     width: 100%;
     text-align: center;
     color: rgb(198, 198, 198);
@@ -13,7 +14,8 @@
 
 .skills {
   width: 100%;
-  height: 90%;
+  height: 80%;
+
   ul {
     display: flex;
     justify-content: center;
@@ -21,7 +23,10 @@
     flex-wrap: wrap;
     width: fit-content;
     padding: 0px;
-    height: 100%;
+    height: 90%;
+    overflow: auto;
+    overflow-x: hidden;
+
     li {
       display: flex;
       flex-direction: column;
@@ -31,6 +36,7 @@
       margin: 2vh;
       width: 150px;
       height: 150px;
+      overflow: hidden;
       list-style: none;
 
       h3 {
@@ -48,4 +54,11 @@
 .css-svg > svg {
   fill: wheat;
   padding-left: 20px;
+}
+@media screen and (min-width: 960px) {
+  .skills {
+    ul {
+      overflow: hidden;
+    }
+  }
 }

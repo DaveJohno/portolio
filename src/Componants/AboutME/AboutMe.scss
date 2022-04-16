@@ -8,14 +8,18 @@ section {
   flex-direction: column;
   align-items: center;
   margin: auto;
+  margin-top: 5vh;
+
   width: 100%;
-  height: 100%;
-  font-size: 1.2rem;
+  height: 90%;
+  font-size: 1rem;
   font-weight: bold;
   overflow: scroll;
   padding: 2px;
 
   p {
+    height: 90%;
+    padding-top: 10px;
     color: wheat;
   }
 }
@@ -24,6 +28,13 @@ section {
   section {
     width: 80%;
     padding: 0px;
+    overflow-x: hidden;
+    margin-top: 0 auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  section {
     overflow: hidden;
   }
 }
