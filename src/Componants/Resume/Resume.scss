@@ -1,13 +1,13 @@
 .resume {
   width: 100%;
-  height: 100%;
+  height: 95%;
 
   background-size: cover;
-  overflow: scroll;
+  // overflow: scroll;
   overflow-x: hidden;
 
   div {
-    height: 200%;
+    height: 100%;
     width: auto;
     background-image: url("./Resume.png");
     background-repeat: no-repeat;

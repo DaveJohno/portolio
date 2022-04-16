@@ -48,7 +48,7 @@ export default function SkillsModal() {
       >
         <Fade in={open}>
           <Box sx={style}>
-            <h1 className="modal-heading">Skills</h1>
+            {/* <h1 className="modal-heading">Skills</h1> */}
             <h2>Some Of My Top Skills Include</h2>
             <section className="skills">
               <ul className="skills-ul">

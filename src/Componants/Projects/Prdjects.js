@@ -9,6 +9,15 @@ import "../Home/Home.scss";
 import ModalBackBtn from "../ModalBackBtn";
 import "./Projects.scss";
 
+// project images
+import fastFeasts from "./project_images/fast_feasts.png";
+import COG from "./project_images/cog_website.png";
+import petRego from "./project_images/pet_rego.png";
+import wingz from "./project_images/wingz.png";
+import ticTacToe from "./project_images/tic_tac_toe.jpeg";
+import gadgetFlippers from "./project_images/gadgetFlippers.png";
+import LPS from "./project_images/LPS.png";
+
 const style = {
   position: "absolute",
   top: "50%",
@@ -27,23 +36,48 @@ const style = {
 export default function ProjectsModal() {
   const projectsArr = [
     {
-      title: "",
-      image: "",
-      description: "",
-      link: "",
+      title: "wingz n thingz",
+      image: wingz,
+      description:
+        "Final project for General Assembly's Front-end web development caurse. take-a-way shop website",
+      link: "https://loving-mirzakhani-e20a3e.netlify.app/",
+      date: "October 2021",
+    },
+    {
+      title: "Pet Regestation Form (Prototype)",
+      image: petRego,
+      description: "Prototype Web form, using javascript and bootstrap",
+      link: "https://codepen.io/davejohno/full/abLyBZL",
+      date: "December 2021",
+    },
+    {
+      title: "COG Landing page (Prototype)",
+      image: COG,
+      description: "prototype landing page for Geelong City Council",
+      link: "https://sad-aryabhata-17164e.netlify.app/",
+      date: "November 2021",
+    },
+
+    {
+      title: "LAPIS, PAPYRUS, SCALPELLUS!",
+      image: LPS,
+      description:
+        "Project 0 for GA's Software Engineering Immersive. A veriation on Rock, Scissors, Paper",
+      link: "https://codepen.io/davejohno/full/RwLoMyq",
       date: "",
     },
 
     {
       title: "Tic Tac Toe",
-      image: "",
-      description: "",
-      link: "",
-      date: "",
+      image: ticTacToe,
+      description:
+        "A game in which two players take turns putting circles and crosses on a 3x3 grid and try to get three of the same symbols in a line",
+      link: "https://davejohno.github.io/tic-tac-toe/",
+      date: "February 2022",
     },
     {
       title: "Fast Feasts",
-      image: "./project_images/fast_feasts.png",
+      image: fastFeasts,
       description:
         "This project allows users to browse a menu, make an order, add extra patrons to the table and allow any meal to have cooking instructions attached to that meal",
       link: "https://afternoon-crag-13970.herokuapp.com/",
@@ -51,11 +85,12 @@ export default function ProjectsModal() {
     },
 
     {
-      title: "",
-      image: "",
-      description: "",
-      link: "",
-      date: "",
+      title: "Gadget Flippers",
+      image: gadgetFlippers,
+      description:
+        "Project 3 was a group project. using github we worked together to produce this ingame item auction site. if has user login and users are able to post austions",
+      link: "https://auction-app-heroku.herokuapp.com/",
+      date: "March 3 2022",
     },
 
     {
@@ -66,28 +101,6 @@ export default function ProjectsModal() {
         "my interperation of the classic game ready to play on the browser just modern tech including HTML, CSS, JavaScript and React",
       link: "https://davejohno-asteroids.herokuapp.com/",
       date: "April 2022",
-    },
-    {
-      title: "Pet Regestation Form Prototype",
-      image: "./project_images/pet_rego.png",
-      description: "Prototype Web form, using javascript and bootstrap",
-      link: "https://codepen.io/davejohno/full/abLyBZL",
-      date: "December 2021",
-    },
-    {
-      title: "COG Prototype",
-      image: "./project_images/cog_website.png",
-      description: "prototype landing page for Geelong City Council",
-      link: "https://sad-aryabhata-17164e.netlify.app/",
-      date: "November 2021",
-    },
-    {
-      title: "wingz n thingz",
-      image: "./project_images/wingz.png",
-      description:
-        "Final project for General Assembly's Front-end web development caurse. take-a-way shop website",
-      link: "https://loving-mirzakhani-e20a3e.netlify.app/",
-      date: "October 2021",
     },
   ];
 
@@ -120,23 +133,32 @@ export default function ProjectsModal() {
           <Box sx={style}>
             <div className="projects">
               <ul className="project-list">
-                <img src="project_images/cog_website.png" alt="" />
-                {projects.map((project, i) => (
+                {projects.reverse().map((project, i) => (
                   <React.Fragment key={i}>
-                    {console.log(project)}
-                    <li className="project-card">
-                      <img
-                        className="project-image"
-                        src={project.image}
-                        alt=""
-                      />
+                    <a href={project.link}>
+                      <li className="project-card">
+                        <img
+                          className="project-image"
+                          src={project.image}
+                          alt=""
+                        />
 
-                      <div className="project-title">{project.title}</div>
-                      <div className="project-description">
-                        {project.description}
-                      </div>
-                      <div className="project-date">{project.date}</div>
-                    </li>
+                        <div className="project-title">
+                          <h3>{project.title.toUpperCase()}</h3>
+                        </div>
+                        <div className="project-description">
+                          <p>
+                            <b>Description: </b>
+                            {project.description}
+                          </p>
+                        </div>
+                        <div className="project-date">
+                          <p>
+                            <b> Date: </b> {project.date}
+                          </p>
+                        </div>
+                      </li>
+                    </a>
                   </React.Fragment>
                 ))}
               </ul>
