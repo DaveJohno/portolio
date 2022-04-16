@@ -4,9 +4,14 @@ import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
 import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
+import "./WorkHistory.scss";
 import "../Home/Home.scss";
 import ModalBackBtn from "../ModalBackBtn";
+
+//logos
+import COGLogo from "./work_images/City-of-greater-geelong-logo-1.png";
+import GALogo from "./work_images/ga_logo.png";
+import BiraLogo from "./work_images/BiralleeTavern-Logo-White-2.png";
 
 const style = {
   position: "absolute",
@@ -28,6 +33,42 @@ export default function WorkModal() {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
+  const workArr = [
+    {
+      title: "Software Engineering Student",
+      place: "General Assembly Australia",
+      image: GALogo,
+      description:
+        "12 week course, covering Front-End Development, Front-End Frameworks, APIs & Full-Stack Development. We leant Languages/frameworks including but not limited to HTML, CSS, JAVASCRIPT, REACT, SCSS, RUBY, SINATRA and PSQL databases, with overviews of countless additional concepts and techniques.",
+      date: "October 2021 - January 2022",
+    },
+    {
+      title: "Web Internship - Digital modernisation team",
+      place: "City of Greater Geelong",
+      image: COGLogo,
+      description:
+        "Prototyping web element, participating in meetings and liaising with internal and external parties in relation to the new web direction for the council.",
+      date: "October 2021 - January 2022",
+    },
+    {
+      title: "Front-End Web Development Student",
+      place: "General Assembly Australia",
+      image: GALogo,
+      description:
+        "10 week part-time course covering the fundamental building block to Building Dynamic, Responsive Websites. We leant  HTML, CSS and JAVASCRIPT. also covering additional concepts and techniques for the modern web.",
+      date: "Augest 2021 - October 2021",
+    },
+    {
+      title: "Gaming Supervisor",
+      place: "Birallee Tavern",
+      image: BiraLogo,
+      description:
+        "Medium Sized establishment with bar, bistro, TAB and Gaming services. Seating Capacity of 100 and 35 Staff. Responsibilities includedCash Handerling,Dealing with customer inquiries and complaints, problem solving.",
+      date: "Augest 2017 - Augest 2021 ",
+    },
+  ];
+  let jobs = workArr;
+
   return (
     <div>
       <Button className="Item-heading" onClick={handleOpen}>
@@ -47,12 +88,29 @@ export default function WorkModal() {
       >
         <Fade in={open}>
           <Box sx={style}>
-            <Typography id="transition-modal-title" variant="h6" component="h2">
-              Text in a modal
-            </Typography>
-            <Typography id="transition-modal-description" sx={{ mt: 2 }}>
-              Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-            </Typography>
+            <div className="jobs">
+              <ul className="job-list">
+                {jobs.map((job, i) => (
+                  <React.Fragment key={i}>
+                    <li className="job-card">
+                      {/* <img src={job.image} alt="" /> */}
+                      <div className="job-employer">
+                        <h2>{job.place}</h2>
+                      </div>
+                      <div className="job-title">
+                        <h3>{job.title}</h3>
+                      </div>
+                      <div className="job-description">
+                        <p>{job.description}</p>
+                      </div>
+                      <div className="job-date">
+                        <h3>{job.date}</h3>
+                      </div>
+                    </li>
+                  </React.Fragment>
+                ))}
+              </ul>
+            </div>
             <ModalBackBtn handleClose={handleClose} />
           </Box>
         </Fade>
