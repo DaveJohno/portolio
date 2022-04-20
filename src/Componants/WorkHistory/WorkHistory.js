@@ -40,7 +40,7 @@ export default function WorkModal() {
       image: GALogo,
       description:
         "12 week course, covering Front-End Development, Front-End Frameworks, APIs & Full-Stack Development. We leant Languages/frameworks including but not limited to HTML, CSS, JAVASCRIPT, REACT, SCSS, RUBY, SINATRA and PSQL databases, with overviews of countless additional concepts and techniques.",
-      date: "October 2021 - January 2022",
+      date: "January 2022 - April 2022",
     },
     {
       title: "Web Internship - Digital modernisation team",
@@ -64,7 +64,7 @@ export default function WorkModal() {
       image: BiraLogo,
       description:
         "Medium Sized establishment with bar, bistro, TAB and Gaming services. Seating Capacity of 100 and 35 Staff. Responsibilities includedCash Handerling,Dealing with customer inquiries and complaints, problem solving.",
-      date: "Augest 2017 - Augest 2021 ",
+      date: "July 2017 - Augest 2021 ",
     },
   ];
   let jobs = workArr;

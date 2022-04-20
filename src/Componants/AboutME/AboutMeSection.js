@@ -4,7 +4,7 @@ export default function AboutMeSection() {
   return (
     <section>
       <p>
-        As an enthusiastic, ambitious and epenthetic former hospitality
+        As an ethusiastic, ambitious and empathetic former hospitality
         professional with 15 years experience, I strive to find a stimulating
         and challenging new career opportunity in software development.
       </p>
