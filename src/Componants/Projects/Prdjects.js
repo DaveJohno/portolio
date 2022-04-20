@@ -42,6 +42,7 @@ export default function ProjectsModal() {
         "Final project for General Assembly's Front-end web development caurse. take-a-way shop website",
       link: "https://loving-mirzakhani-e20a3e.netlify.app/",
       date: "October 2021",
+      github: "",
     },
     {
       title: "Pet Regestation Form (Prototype)",
@@ -49,6 +50,7 @@ export default function ProjectsModal() {
       description: "Prototype Web form, using javascript and bootstrap",
       link: "https://codepen.io/davejohno/full/abLyBZL",
       date: "December 2021",
+      github: "",
     },
     {
       title: "COG Landing page (Prototype)",
@@ -56,6 +58,7 @@ export default function ProjectsModal() {
       description: "prototype landing page for Geelong City Council",
       link: "https://sad-aryabhata-17164e.netlify.app/",
       date: "November 2021",
+      github: "",
     },
 
     {
@@ -64,7 +67,8 @@ export default function ProjectsModal() {
       description:
         "Project 0 for GA's Software Engineering Immersive. A veriation on Rock, Scissors, Paper",
       link: "https://codepen.io/davejohno/full/RwLoMyq",
-      date: "",
+      date: "January 2022",
+      github: "",
     },
 
     {
@@ -74,6 +78,7 @@ export default function ProjectsModal() {
         "A game in which two players take turns putting circles and crosses on a 3x3 grid and try to get three of the same symbols in a line",
       link: "https://davejohno.github.io/tic-tac-toe/",
       date: "February 2022",
+      github: "",
     },
     {
       title: "Fast Feasts",
@@ -82,6 +87,7 @@ export default function ProjectsModal() {
         "This project allows users to browse a menu, make an order, add extra patrons to the table and allow any meal to have cooking instructions attached to that meal",
       link: "https://afternoon-crag-13970.herokuapp.com/",
       date: "february 2022",
+      github: "",
     },
 
     {
@@ -91,6 +97,7 @@ export default function ProjectsModal() {
         "Project 3 was a group project. using github we worked together to produce this ingame item auction site. if has user login and users are able to post austions",
       link: "https://auction-app-heroku.herokuapp.com/",
       date: "March 3 2022",
+      github: "",
     },
 
     {
@@ -101,6 +108,7 @@ export default function ProjectsModal() {
         "my interperation of the classic game ready to play on the browser just modern tech including HTML, CSS, JavaScript and React",
       link: "https://davejohno-asteroids.herokuapp.com/",
       date: "April 2022",
+      github: "",
     },
   ];
 
@@ -135,7 +143,11 @@ export default function ProjectsModal() {
               <ul className="project-list">
                 {projects.reverse().map((project, i) => (
                   <React.Fragment key={i}>
-                    <a href={project.link}>
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <li className="project-card">
                         <img
                           className="project-image"
