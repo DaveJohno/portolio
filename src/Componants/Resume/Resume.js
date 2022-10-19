@@ -9,6 +9,8 @@ import "../Home/Home.scss";
 import "./Resume.scss";
 import ModalBackBtn from "../ModalBackBtn";
 import ResumeSVG from "./ResumeSVG";
+import { Document, Page } from "react-pdf";
+import resumePDF from ".//David.Johnston.Jr.Software.Engineer.Resume.pdf";
 
 const style = {
   position: "absolute",
@@ -31,12 +33,14 @@ export default function ResumeModal() {
   const handleClose = () => setOpen(false);
 
   return (
-    <div>
-      <Button className="Item-heading" onClick={handleOpen}>
-        <span className="material-icons">picture_as_pdf</span>
-        <h4 className="Item-Icon">Resume</h4>
-      </Button>
-      <Modal
+    <div className="resume">
+      <a href={resumePDF} target="blank">
+        <Button className="Item-heading">
+          <span className="material-icons">picture_as_pdf</span>
+          <h4 className="Item-Icon">Resume</h4>
+        </Button>
+      </a>
+      {/* <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
         open={open}
@@ -50,11 +54,10 @@ export default function ResumeModal() {
         <Fade in={open}>
           <Box sx={style}>
             <ResumeSVG />
-
             <ModalBackBtn handleClose={handleClose} />
           </Box>
         </Fade>
-      </Modal>
+      </Modal> */}
     </div>
   );
 }

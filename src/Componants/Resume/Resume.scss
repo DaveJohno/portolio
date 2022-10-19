@@ -6,13 +6,16 @@
   // overflow: scroll;
   overflow-x: hidden;
 
-  div {
-    height: 100%;
-    width: auto;
-    background-image: url("./Resume.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: 50%;
-    overflow-x: hidden; /* Hide horizontal scrollbar */
+  a {
+    text-decoration: none;
   }
+  // div {
+  //   height: 100%;
+  //   width: auto;
+  //   background-image: url("./Resume.png");
+  //   background-repeat: no-repeat;
+  //   background-size: contain;
+  //   background-position: 50%;
+  //   overflow-x: hidden; /* Hide horizontal scrollbar */
+  // }
 }

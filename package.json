@@ -27,7 +27,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "npm run build; surge build davejohno-portfolio.surge.sh",
+    "deploy": "npm run build; surge build",
     "dist": "echo davejohno.com > build/CNAME; surge"
   },
   "eslintConfig": {
