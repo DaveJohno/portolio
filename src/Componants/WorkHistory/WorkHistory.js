@@ -35,6 +35,14 @@ export default function WorkModal() {
 
   const workArr = [
     {
+      title: "Instructor Associate",
+      place: "General Assembly Australia",
+      image: GALogo,
+      description:
+        "Working closely with the instructor to support the delivery of the content. Troubleshooting technical issues and debug. Provide support and mentoring to the students. Keep the instructor informed about the overall progress of thecohort as well as individual students.",
+      date: "July 2022 - Current",
+    },
+    {
       title: "Software Engineering Student",
       place: "General Assembly Australia",
       image: GALogo,

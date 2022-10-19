@@ -31,7 +31,7 @@ export default function ContactMeModal() {
   const handleClose = () => setOpen(false);
 
   return (
-    <div>
+    <div className="">
       <Button className="Item-heading" onClick={handleOpen}>
         <span className="material-icons">face</span>
         <h4 className="Item-Icon">About</h4>
@@ -48,7 +48,7 @@ export default function ContactMeModal() {
         }}
       >
         <Fade in={open}>
-          <Box sx={style}>
+          <Box className="About-me-model" sx={style}>
             <h1 className="modal-heading">About Me</h1>
             <AboutMeSection />
             <ModalBackBtn handleClose={handleClose} />

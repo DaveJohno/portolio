@@ -1,41 +1,43 @@
 body > div.MuiModal-root.css-79ws1d-MuiModal-root > div.MuiBox-root.css-ulby4e {
-  padding: 10vh 1vw;
-  padding-bottom: 7vh;
+  // padding: 10vh 1vw;
+  // padding-bottom: 7vh;
 }
 
-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: auto;
-  margin-top: 5vh;
-
-  width: 100%;
+body
+  > div.MuiModal-root.css-79ws1d-MuiModal-root
+  > div.About-me-model.MuiBox-root.css-9ehdpv {
+  padding: 10vh 0px 10vh 0;
   height: 90%;
-  font-size: 1rem;
-  font-weight: bold;
-  overflow: scroll;
-  padding: 2px;
+  width: 90%;
 
-  p {
-    height: 90%;
-    padding-top: 10px;
-    color: wheat;
-    max-width: 600px;
-  }
-}
-
-@media screen and (min-width: 480px) {
   section {
-    width: 80%;
-    padding: 0px;
-    overflow-x: hidden;
-    margin-top: 0 auto;
-  }
-}
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    font-size: 1rem;
+    font-weight: bold;
+    overflow-y: auto;
+    padding: 10px;
 
-@media screen and (min-width: 768px) {
-  section {
-    overflow: hidden;
+    p {
+      margin-top: 0px;
+      color: wheat;
+      max-width: 600px;
+    }
+  }
+
+  @media screen and (min-width: 480px) {
+    section {
+      padding: 10px;
+      margin-top: 0 auto;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    section {
+    }
   }
 }
